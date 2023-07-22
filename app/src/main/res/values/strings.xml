@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">IndoorFit</string>
+    <string name="start_btn">START</string>
+    <string name="slogan">Workout and get fit at home</string>
+    <string name="home_img">home image</string>
+    <string name="reports">REPORTS</string>
+    <string name="completed">Completed</string>
+    <string name="_zero">0</string>
+    <string name="kcal">Kcal</string>
+    <string name="duration">Duration</string>
+    <string name="add">Add</string>
+    <string name="ex_title">Home Fitness Exercises</string>
+    <string name="allIn_btn">All-in Exercises</string>
+    <string name="butt_btn">Butt Exercises</string>
+    <string name="abs_btn">Abs Exercises</string>
+    <string name="chest_btn">Chest Exercises</string>
+    <string name="leg_btn">Leg Exercises</string>
+    <string name="arm_btn">Arm Exercises</string>
+
+
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="your_height_in_cm">Your Height in Cm</string>
+    <string name="your_weight_in_kg">Your Weight in Kg</string>
+    <string name="your_result">Your Result</string>
+    <string name="weight_value">weight</string>
+    <string name="height_value">height</string>
+    <string name="calculate">Calculate</string>
+    <string name="weight">Weight</string>
+    <string name="cm">cm</string>
+    <string name="height">Height</string>
+    <string name="bmi">BMI</string>
+    <string name="kg">kg</string>
+    <string name="lbs">lbs</string>
+    <string name="imperial_units">Imperial Units</string>
+    <string name="metric_units">Metric Units</string>
+    <string name="ft">ft</string>
+    <string name="in">in</string>
+
+
+    <string name="meal">MEAL</string>
+    <string name="day_30">Day 30</string>
+    <string name="day_1">Day 1</string>
+
+
+    <string name="full_body_workout">Full Body Workout</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register">Register</string>
+    <string name="indoor_fit_register">IndoorFit Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="register_user">REGISTER USER</string>
+    <string name="home">Home</string>
+    <string name="next_button">Next</string>
+    <string name="sp1_quotes"><![CDATA[Make Suitable\n Workouts &\n Great Results]]></string>
+    <string name="sp2_quotes">Let\'s do a workout\n and live healthy\n with us</string>
+
+</resources>
