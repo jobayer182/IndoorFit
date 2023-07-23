@@ -1,0 +1,8 @@
+<!-- res/drawable/round_textfield_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FFFFFF" /> <!-- Background color of the shape, change as needed -->
+
+    <corners android:radius="20dp" /> <!-- The radius determines the roundness of the shape -->
+</shape>
