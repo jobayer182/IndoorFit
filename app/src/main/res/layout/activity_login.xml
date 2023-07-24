@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#DCD6D6"
+    android:background="#FEFEFE"
     tools:context=".LoginActivity">
 
 
@@ -13,87 +13,118 @@
         android:id="@+id/appNameId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Login to Your Account"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:text="@string/login_to_your_account"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:textStyle="bold"
         android:gravity="center_horizontal" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
+    <!-- res/layout/activity_main.xml or your desired layout file -->
+    <EditText
+        android:id="@+id/ipEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:hint="@string/email_address">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ipEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/round_textfield_bg"
+        android:backgroundTint="#E2E0E0"
         android:layout_marginTop="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:hint="@string/password">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ipPassword"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:padding="15dp"
+        android:hint="@string/enter_e_mail_address"
+        android:textColor="#000000"
+        tools:targetApi="lollipop" /> <!-- Change text color as needed -->
+    <EditText
+        android:id="@+id/ipPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/round_textfield_bg"
+        android:backgroundTint="#E2E0E0"
+        android:hint="@string/enter_password"
+        android:padding="15dp"
+        android:textColor="#000000"
+        />
 
     <Button
         android:id="@+id/loginButtonId"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_button_black_bg"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/forgotPassId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:text="@string/forgot_password"
+        android:textColor="#6842FF"
+        android:textAllCaps="false"
         android:layout_gravity="center"
-        android:backgroundTint="#EA0A0A"
-        android:text="@string/login"
-        android:textSize="25sp"
-        tools:targetApi="lollipop" />
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="━━━━ or continue with ━━━━"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/googleButtonId"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_textfield_bg"
+        android:drawableStart="@drawable/ic_google_icon"
+        android:text="@string/google"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/forgotPassId"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password"
-            android:layout_weight="1"
-            android:textStyle="italic"
+            android:text="@string/don_t_have_an_account"
+            android:background="@color/white"
+            android:textColor="#6842FF"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
             android:textSize="20sp"
-            android:layout_marginStart="15dp"
-
-            android:layout_marginTop="50dp"/>
-
-        <TextView
+            />
+        <Button
             android:id="@+id/registerActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/register"
+            android:background="#00FFFFFF"
+            android:text="@string/sign_up"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
             android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            />
 
+    </LinearLayout>
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"

@@ -48,12 +48,21 @@
     <string name="login">LOGIN</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="register">Register</string>
-    <string name="indoor_fit_register">IndoorFit Register</string>
     <string name="full_name">Full Name</string>
-    <string name="register_user">REGISTER USER</string>
     <string name="home">Home</string>
     <string name="next_button">Next</string>
     <string name="sp1_quotes"><![CDATA[Make Suitable\n Workouts &\n Great Results]]></string>
     <string name="sp2_quotes">Let\'s do a workout\n and live healthy\n with us</string>
+    <string name="enter_e_mail_address">Enter E-mail Address</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login_to_your_account">Login to Your Account</string>
+    <string name="google">Google</string>
+    <string name="enter_password">Enter password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="e_mail">e-mail</string>
+    <string name="re_type_password">re-type password</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
 
 </resources>

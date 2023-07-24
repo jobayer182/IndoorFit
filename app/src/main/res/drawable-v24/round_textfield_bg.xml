@@ -4,5 +4,5 @@
 
     <solid android:color="#FFFFFF" /> <!-- Background color of the shape, change as needed -->
 
-    <corners android:radius="20dp" /> <!-- The radius determines the roundness of the shape -->
+    <corners android:radius="50dp" /> <!-- The radius determines the roundness of the shape -->
 </shape>
