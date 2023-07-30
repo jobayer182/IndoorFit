@@ -4,22 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.menuHome);
+        bottomNavigationView.setSelectedItemId(R.id.menuProfile);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.menuHome:
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
                     return true;
                 case R.id.menuStep:
                     startActivity(new Intent(getApplicationContext(), StepCounterActivity.class));
@@ -31,23 +33,16 @@ public class MainActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                     return true;
-
                 case R.id.menuNutrition:
                     startActivity(new Intent(getApplicationContext(), NutritionActivity.class));
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                     return true;
-
                 case R.id.menuProfile:
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                     return true;
             }
             return false;
 
         });
-
-
     }
 }

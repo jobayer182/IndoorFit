@@ -64,5 +64,10 @@
     <string name="re_type_password">re-type password</string>
     <string name="create_your_account">Create Your Account</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="workout">Workout</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="step_counter">Step Counter</string>
+    <string name="profile">Profile</string>
+    <string name="featured_workout">Featured Workout</string>
 
 </resources>

@@ -11,70 +11,71 @@
         android:id="@+id/registerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_100sdp"
         android:text="@string/create_your_account"
         android:textColor="@color/black"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/ipFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:background="@drawable/round_textfield_bg"
         android:backgroundTint="#E2E0E0"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:padding="15dp"
         android:hint="@string/full_name"
+        android:padding="15dp"
         android:textColor="#000000"
-        android:layout_gravity="center_horizontal"
         tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/ipEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:background="@drawable/round_textfield_bg"
         android:backgroundTint="#E2E0E0"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:padding="15dp"
         android:hint="@string/e_mail"
+        android:padding="15dp"
         android:textColor="#000000"
-        android:layout_gravity="center_horizontal"
         tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/ipPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:background="@drawable/round_textfield_bg"
         android:backgroundTint="#E2E0E0"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:padding="15dp"
         android:hint="@string/password"
+        android:padding="15dp"
         android:textColor="#000000"
-        android:layout_gravity="center_horizontal"
         tools:targetApi="lollipop" />
+
     <EditText
         android:id="@+id/ipRePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:background="@drawable/round_textfield_bg"
         android:backgroundTint="#E2E0E0"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:padding="15dp"
         android:hint="@string/re_type_password"
+        android:padding="15dp"
         android:textColor="#000000"
-        android:layout_gravity="center_horizontal"
         tools:targetApi="lollipop" />
 
     <Button
@@ -85,9 +86,9 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/round_button_black_bg"
         android:text="@string/register"
-        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         tools:targetApi="lollipop" />
 
     <LinearLayout
@@ -100,24 +101,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/already_have_an_account"
-            android:textColor="#6842FF"
-            android:textAllCaps="false"
             android:layout_gravity="center"
-            android:textSize="20sp"
-            />
+            android:text="@string/already_have_an_account"
+            android:textAllCaps="false"
+            android:textColor="#6842FF"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/registerActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
-            android:background="#00FFFFFF"
-            android:textColor="#000000"
-            android:textAllCaps="false"
             android:layout_gravity="center"
-            android:textStyle="bold"
+            android:background="#00FFFFFF"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="#000000"
             android:textSize="20sp"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -126,11 +126,11 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="40dp"
-        android:visibility="invisible"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="2"/>
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="2"
+        android:visibility="invisible" />
 
 
 </LinearLayout>
