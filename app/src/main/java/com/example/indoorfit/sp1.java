@@ -19,7 +19,7 @@ public class sp1 extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sp1);
 
-        nextButton=findViewById(R.id.button_view_id);
+        nextButton=findViewById(R.id.next_button);
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {

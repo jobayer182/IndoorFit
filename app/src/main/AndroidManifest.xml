@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Google Fit permissions -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/sp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndoorFit"
-        tools:targetApi="31">
+        tools:targetApi="tiramisu">
         <activity
-            android:name=".StepCounterActivity"
+            android:name=".Nutrition.VeggiesED"
             android:exported="false" />
+        <activity
+            android:name=".Nutrition.NutED"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.MeatED"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.FishED"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.FruitED"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.Veggies"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.Nut"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.Meat"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.Fish"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition.Fruit"
+            android:exported="false" />
+        <activity
+            android:name=".workout.LegED"
+            android:exported="false" />
+        <activity
+            android:name=".workout.ShoulderBackED"
+            android:exported="false" />
+        <activity
+            android:name=".workout.AbsED"
+            android:exported="false" />
+        <activity
+            android:name=".workout.ArmChestED"
+            android:exported="false" />
+        <activity
+            android:name=".workout.FullBodyED"
+            android:exported="false" />
+        <activity
+            android:name=".workout.LegWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".workout.ShoulderBackWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".workout.ArmChestWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".workout.AbsWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".workout.FullBodyWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".StepCounter.StepCounterActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".StepCounter.StepsService"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
@@ -24,7 +99,7 @@
             android:exported="false" />
         <activity
             android:name=".WorkoutActivity"
-            android:exported="false" />
+            android:exported="false" /> <!-- Define your launcher activity -->
         <activity
             android:name=".sp"
             android:exported="true">
@@ -33,7 +108,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Other activities (non-launcher) -->
         <activity
             android:name=".sp1"
             android:exported="true" />

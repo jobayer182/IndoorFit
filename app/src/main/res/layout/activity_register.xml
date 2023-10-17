@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="@string/create_your_account"
         android:textColor="@color/black"
         android:textSize="35sp"
@@ -20,76 +20,82 @@
 
     <EditText
         android:id="@+id/ipFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:background="@drawable/round_textfield_bg"
-        android:backgroundTint="#E2E0E0"
-        android:hint="@string/full_name"
-        android:padding="15dp"
-        android:textColor="#000000"
-        tools:targetApi="lollipop" />
+        android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:background="@drawable/round_textfield_bg"
+    android:hint="@string/full_name"
+    android:padding="15dp"
+    android:textColor="#000000"
+    android:inputType="text"
+    android:autofillHints="name" />
+
 
     <EditText
         android:id="@+id/ipEmail"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="@dimen/_30sdp"
+        android:autofillHints="emailAddress"
         android:background="@drawable/round_textfield_bg"
-        android:backgroundTint="#E2E0E0"
         android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
         android:padding="15dp"
-        android:textColor="#000000"
-        tools:targetApi="lollipop" />
+        android:textColor="#000000" />
+
 
     <EditText
         android:id="@+id/ipPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:background="@drawable/round_textfield_bg"
-        android:backgroundTint="#E2E0E0"
-        android:hint="@string/password"
-        android:padding="15dp"
-        android:textColor="#000000"
-        tools:targetApi="lollipop" />
+        android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:background="@drawable/round_textfield_bg"
+    android:hint="@string/password"
+    android:padding="15dp"
+    android:textColor="#000000"
+        android:autofillHints="password"
+    android:inputType="textPassword" />
+
 
     <EditText
         android:id="@+id/ipRePassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:background="@drawable/round_textfield_bg"
-        android:backgroundTint="#E2E0E0"
-        android:hint="@string/re_type_password"
-        android:padding="15dp"
-        android:textColor="#000000"
-        tools:targetApi="lollipop" />
+        android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:background="@drawable/round_textfield_bg"
+    android:hint="@string/re_type_password"
+    android:padding="15dp"
+    android:textColor="#000000"
+        android:autofillHints="password"
+    android:inputType="textPassword" />
+
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="@drawable/round_button_black_bg"
+        android:maxWidth="@dimen/_200sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
         android:text="@string/register"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        tools:targetApi="lollipop" />
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -127,8 +133,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:layout_weight="2"
         android:visibility="invisible" />
 

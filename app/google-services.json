@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "632514293087-75mnt0en278lp4k0i90r9p1201pqrv42.apps.googleusercontent.com",
+          "client_id": "632514293087-0dqo63h35nedelrh4o20fl395fo6bhaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.indoorfit",
+            "certificate_hash": "e005d6a5b3b030f64f171978b17c8e580589cb81"
+          }
+        },
+        {
+          "client_id": "632514293087-29ne2ipeh4oh91vcal9boumpir772533.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "632514293087-75mnt0en278lp4k0i90r9p1201pqrv42.apps.googleusercontent.com",
+              "client_id": "632514293087-29ne2ipeh4oh91vcal9boumpir772533.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

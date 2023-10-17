@@ -1,44 +1,465 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#DDDADA"
+    android:orientation="vertical"
     tools:context=".WorkoutActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:textSize="20sp"
-        android:text="@string/workout"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:layout_height="wrap_content">
 
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/left_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/rectangle_back"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/back_button"
+                android:padding="5dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/workout_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_80sdp"
+                android:fontFamily="@font/segoeuib"
+                android:padding="5dp"
+                android:text="@string/workout_activity"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold|normal" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/seguisb"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/what_do_you_want_to_train"
+            android:textColor="#131A35"
+            android:textSize="20sp"
+
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:background="#DDDADA">
 
-    <!-- View Divider -->
-    <View
-        android:id="@+id/viewDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#1FFFFFFF" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!-- Bottom Navigation View -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="30dp"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/navigation_menu" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/segoeuib"
+                            android:text="@string/fullBody"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/_11_exercise_30min"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/fullBodyWorkout"
+                            android:layout_width="125dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_corners"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/view_more"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#20B2AA"
+                            android:textSize="18sp"
+                            android:contentDescription="@string/view_more_full_body_workout"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1.2"
+                        android:src="@drawable/fullbody" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/segoeuib"
+                            android:text="@string/abs"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/_11_exercise_30min"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/absWorkout"
+                            android:layout_width="125dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_corners"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/view_more"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#20B2AA"
+                            android:textSize="18sp"
+                            android:contentDescription="@string/view_more_abs_workout"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1.2"
+                        android:src="@drawable/abs" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/segoeuib"
+                            android:text="@string/arm_chest"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/_11_exercise_30min"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/armChestWorkout"
+                            android:layout_width="125dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_corners"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/view_more"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#20B2AA"
+                            android:textSize="18sp"
+                            android:contentDescription="@string/view_more_arm_chest_workout"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1.2"
+                        android:src="@drawable/armchest" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/segoeuib"
+                            android:text="@string/shoulder_back"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/_11_exercise_30min"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/shoulderBackWorkout"
+                            android:layout_width="125dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_corners"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/view_more"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#20B2AA"
+                            android:textSize="18sp"
+                            android:contentDescription="@string/view_more_shoulder_back_workout"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1.2"
+                        android:src="@drawable/shoulderback" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/segoeuib"
+                            android:text="@string/leg"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/_11_exercise_30min"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/legWorkout"
+                            android:layout_width="125dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_corners"
+                            android:fontFamily="@font/segoeui"
+                            android:text="@string/view_more"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#20B2AA"
+                            android:textSize="18sp"
+                            android:contentDescription="@string/view_more_leg_workout"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1.2"
+                        android:src="@drawable/leg" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <!-- View Divider -->
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1FFFFFFF" />
+
+        <!-- Bottom Navigation View -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/white"
+            app:itemIconSize="30dp"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/navigation_menu" />
+    </RelativeLayout>
 
 </LinearLayout>

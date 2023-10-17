@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center">
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="@dimen/_400sdp"
-        android:layout_height="@dimen/_350sdp"
-        android:scaleType="fitXY"
-        android:src="@drawable/sp2" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/_400sdp"
-        android:layout_height="@dimen/_220sdp"
-        android:layout_above="@+id/imageView1"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="-250dp"
-        android:src="@drawable/pink_shape" />
+            <ImageView
+                android:id="@+id/sp1iD"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sp2"
+                android:contentDescription="@string/sp2image"/>
 
-    <TextView
-        android:layout_width="@dimen/_400sdp"
-        android:layout_height="@dimen/_130sdp"
-        android:layout_above="@id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="61dp"
-        android:text="@string/sp2_quotes"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="45sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/sp1iD"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/rectangle_sp2"
+                android:fontFamily="@font/seguisb"
+                android:gravity="center"
+                android:text="@string/sp2_quotes"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
+
+        </RelativeLayout>
+
+
+    </ScrollView>
     <Button
-        android:id="@+id/button_view_id"
-        android:layout_width="@dimen/_270sdp"
-        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_565sdp"
-        android:background="@drawable/rectangle"
-        android:text="@string/next_button"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/next_button"
+        android:gravity="center"
+        android:text="@string/next_button" />
 
 </RelativeLayout>

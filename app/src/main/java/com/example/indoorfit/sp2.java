@@ -20,7 +20,7 @@ public class sp2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sp2);
 
-        nextButton=findViewById(R.id.button_view_id);
+        nextButton=findViewById(R.id.next_button);
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {

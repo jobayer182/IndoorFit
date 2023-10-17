@@ -1,0 +1,5 @@
+<!-- res/drawable/round_textfield_bg_email.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E2E0E0" /> <!-- Background color -->
+    <corners android:radius="@dimen/_8sdp" /> <!-- Rounded corners radius -->
+</shape>

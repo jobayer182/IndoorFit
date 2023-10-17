@@ -1,21 +1,10 @@
 <resources>
+
+
     <string name="app_name">IndoorFit</string>
     <string name="start_btn">START</string>
     <string name="slogan">Workout and get fit at home</string>
-    <string name="home_img">home image</string>
-    <string name="reports">REPORTS</string>
-    <string name="completed">Completed</string>
     <string name="_zero">0</string>
-    <string name="kcal">Kcal</string>
-    <string name="duration">Duration</string>
-    <string name="add">Add</string>
-    <string name="ex_title">Home Fitness Exercises</string>
-    <string name="allIn_btn">All-in Exercises</string>
-    <string name="butt_btn">Butt Exercises</string>
-    <string name="abs_btn">Abs Exercises</string>
-    <string name="chest_btn">Chest Exercises</string>
-    <string name="leg_btn">Leg Exercises</string>
-    <string name="arm_btn">Arm Exercises</string>
 
 
     <string name="bmi_calculator">BMI Calculator</string>
@@ -36,13 +25,11 @@
     <string name="ft">ft</string>
     <string name="in">in</string>
 
-
-    <string name="meal">MEAL</string>
-    <string name="day_30">Day 30</string>
-    <string name="day_1">Day 1</string>
-
-
-    <string name="full_body_workout">Full Body Workout</string>
+    <string name="full_body_activity">Full Body Workout</string>
+    <string name="abs_activity">ABS Workout</string>
+    <string name="arm_chest_activity"><![CDATA[ARM & CHEST Workout]]></string>
+    <string name="shoulder_back_activity"><![CDATA[SHOULDER & BACK Workout]]></string>
+    <string name="leg_activity">LEG Workout</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
@@ -69,5 +56,987 @@
     <string name="step_counter">Step Counter</string>
     <string name="profile">Profile</string>
     <string name="featured_workout">Featured Workout</string>
+    <string name="step_counter_activity">Step Counter Activity</string>
+    <string name="workout_activity">Workout Activity</string>
+    <string name="_0">0</string>
+    <string name="today_s_distance_covered">Today\'s Distance Covered</string>
+    <string name="today_s_burnt_calories">Today\'s Burnt Calories</string>
+    <string name="steps_count">Steps Count</string>
+    <string name="back_button">backButton</string>
+    <string name="todo">TODO</string>
+    <string name="workoutBack">workoutBack</string>
+    <string name="what_do_you_want_to_train">What do You Want to Train?</string>
+    <string name="fullBody">FULLBODY</string>
+    <string name="abs">ABS</string>
+    <string name="arm_chest"><![CDATA[ARM & CHEST]]></string>
+    <string name="shoulder_back"><![CDATA[SHOULDER & BACK]]></string>
+    <string name="leg">LEG</string>
+    <string name="_11_exercise_30min">11 Exercise | 30min</string>
+    <string name="view_more">View more</string>
+    <string name="full_body_description">fullbody_description</string>
+    <string name="abs_description">abs_description</string>
+    <string name="shoulder_back_description">shoulderback_description</string>
+    <string name="arm_chest_description">armchest_description</string>
+    <string name="leg_description">leg_description</string>
+    <string name="push_ups">Push-Ups</string>
+    <string name="x_3_30s_each_round">x 3 | 30s each round</string>
+    <string name="view_more_full_body_workout">View More Full Body Workout</string>
+    <string name="view_more_abs_workout">View More Abs Workout</string>
+    <string name="view_more_arm_chest_workout"><![CDATA[View More Arm & Chest Workout]]></string>
+    <string name="view_more_shoulder_back_workout"><![CDATA[View More Shoulder & Back Workout]]></string>
+    <string name="view_more_leg_workout">View More Leg Workout</string>
+    <string name="close_button">close_button</string>
+    <string name="bicycle_crunches">bicycle_crunches</string>
+    <string name="close">close</string>
+
+
+    <string-array name="fullBody_workout_names">
+        <item>Push-Ups</item>
+        <item>Squats</item>
+        <item>Lunges</item>
+        <item>Plank</item>
+        <item>Burpees</item>
+        <item>Mountain Climbers</item>
+        <item>Jumping Jacks</item>
+        <item>High Knees</item>
+        <item>Russian Twists</item>
+        <item>Bicycle Crunches</item>
+    </string-array>
+
+    <string name="posePushUps">
+    Step 1: Start in the push-up position with your arms completely straight and directly beneath your shoulders.\n\n
+    Step 2: Your body should form a straight line from your shoulders to your ankles.\n\n
+    Step 3: Squeeze your abs, lift one foot off the floor and bring your knee up towards your chest while keeping your body in as straight of a line as possible.\n\n
+    Step 4: Return to the starting position and repeat the movement with your opposite leg.
+</string>
+
+    <string name="poseSquats">
+    Step 1: Stand with your feet shoulder-width apart.\n\n
+    Step 2: Lower your body by bending your knees and pushing your hips back, as if sitting down on an imaginary chair.\n\n
+    Step 3: Keep your back straight and your chest up.\n\n
+    Step 4: Push through your heels to return to the starting position.
+</string>
+
+    <string name="poseLunges">
+    Step 1: Start by standing with your feet together.\n\n
+    Step 2: Take a step forward with one leg and lower your body until both knees are bent at 90-degree angles.\n\n
+    Step 3: Push off the front foot to return to the starting position.\n\n
+    Step 4: Repeat with the opposite leg.
+</string>
+
+    <string name="posePlank">
+    Step 1: Begin in a push-up position with your arms extended and hands beneath your shoulders.\n\n
+    Step 2: Keep your body in a straight line from head to heels, engaging your core muscles.\n\n
+    Step 3: Hold this position for the desired duration, keeping your abs and glutes tight.
+</string>
+
+    <string name="poseBurpees">
+    Step 1: Start by standing with your feet shoulder-width apart.\n\n
+    Step 2: Drop into a squat position and place your hands on the floor in front of you.\n\n
+    Step 3: Kick your feet back into a push-up position.\n\n
+    Step 4: Perform a push-up.\n\n
+    Step 5: Jump your feet back to the squat position.\n\n
+    Step 6: Explosively jump up into the air, reaching your arms overhead.
+</string>
+
+    <string name="poseMountainClimbers">
+    Step 1: Begin in a push-up position with your arms extended and hands beneath your shoulders.\n\n
+    Step 2: Drive one knee toward your chest while keeping your hips down and your core engaged.\n\n
+    Step 3: Quickly switch legs in a running motion, alternating knees.
+</string>
+
+    <string name="poseJumpingJacks">
+    Step 1: Start by standing with your feet together and arms at your sides.\n\n
+    Step 2: Jump your feet out wide as you simultaneously raise your arms overhead.\n\n
+    Step 3: Jump your feet back together and return your arms to your sides.
+</string>
+
+    <string name="poseHighKnees">
+    Step 1: Stand with your feet hip-width apart.\n\n
+    Step 2: Lift your right knee towards your chest, aiming to get it as high as possible.\n\n
+    Step 3: Lower your right leg and immediately lift your left knee.\n\n
+    Step 4: Continue alternating legs, as if running in place while lifting your knees.
+</string>
+
+    <string name="poseRussianTwists">
+    Step 1: Sit on the floor with your knees bent and feet flat.\n\n
+    Step 2: Lean back slightly, keeping your back straight and core engaged.\n\n
+    Step 3: Clasp your hands together in front of you and twist your torso to the right, then to the left.\n\n
+    Step 4: Keep your feet off the ground for an added challenge.
+</string>
+
+    <string name="poseBicycleCrunches">
+    Step 1: Lie on your back with your hands behind your head and knees lifted, forming a 90-degree angle.\n\n
+    Step 2: Bring your right elbow and left knee towards each other while extending your right leg out.\n\n
+    Step 3: Switch sides by bringing your left elbow and right knee towards each other while extending your left leg out.\n\n
+    Step 4: Continue alternating sides in a pedaling motion.
+</string>
+
+
+    <!-- descriptions for the full body exercises -->
+
+    <string-array name="abs_workout_names">
+        <item>Crunches</item>
+        <item>Reverse Crunches</item>
+        <item>Plank</item>
+        <item>Bicycle Crunches</item>
+        <item>Russian Twists</item>
+        <item>Leg Raises</item>
+        <item>Scissor Kicks</item>
+    </string-array>
+
+
+    <string name="poseCrunches">
+    Step 1: Lie on your back with your knees bent and feet flat on the floor.\n\n
+    Step 2: Place your hands behind your head, but avoid pulling on your neck.\n\n
+    Step 3: Curl your upper body off the floor and towards your knees, engaging your abdominal muscles.\n\n
+    Step 4: Lower your body back down and repeat.
+</string>
+
+    <string name="poseReverseCrunches">
+    Step 1: Lie on your back with your legs extended and your hands by your sides or under your hips for support.\n\n
+    Step 2: Lift your legs off the ground while keeping them straight.\n\n
+    Step 3: Curl your knees towards your chest by lifting your hips off the ground.\n\n
+    Step 4: Lower your legs back down to the starting position.
+</string>
+
+    <string name="posePlankAbs">
+    Step 1: Begin in a push-up position, but with your weight on your forearms instead of your hands.\n\n
+    Step 2: Keep your body in a straight line from head to heels.\n\n
+    Step 3: Engage your core and hold this position for the desired duration.
+</string>
+
+    <string name="poseBicycleCrunchesAbs">
+    Step 1: Lie on your back with your hands behind your head and knees lifted, forming a 90-degree angle.\n\n
+    Step 2: Bring your right elbow and left knee towards each other while extending your right leg out.\n\n
+    Step 3: Switch sides by bringing your left elbow and right knee towards each other while extending your left leg out.\n\n
+    Step 4: Continue alternating sides in a pedaling motion.
+</string>
+
+    <string name="poseRussianTwistsAbs">
+    Step 1: Sit on the floor with your knees bent and feet flat.\n\n
+    Step 2: Lean back slightly, keeping your back straight and core engaged.\n\n
+    Step 3: Clasp your hands together in front of you and twist your torso to the right, then to the left.\n\n
+    Step 4: Keep your feet off the ground for an added challenge.
+</string>
+
+    <string name="poseLegRaises">
+    Step 1: Lie on your back with your legs extended and your arms by your sides.\n\n
+    Step 2: Lift your legs off the ground while keeping them straight.\n\n
+    Step 3: Slowly lower your legs back down, stopping before they touch the floor.\n\n
+    Step 4: Lift your legs back up and repeat.
+</string>
+
+    <string name="poseScissorKicks">
+    Step 1: Lie on your back with your legs extended and your hands under your hips for support.\n\n
+    Step 2: Lift your legs off the ground a few inches.\n\n
+    Step 3: Cross your right leg over your left leg, then switch quickly to cross your left leg over your right.\n\n
+    Step 4: Continue alternating in a scissor-like motion.
+</string>
+
+
+    <!-- descriptions for the abs exercises -->
+
+    <string-array name="arm_chest_workout_names">
+        <item>Push-Ups</item>
+        <item>Triceps Dips on a chair</item>
+        <item>Diamond push-Ups</item>
+        <item>Decline push-Ups</item>
+        <item>Wide Push-Ups</item>
+        <item>Clap Push-Ups</item>
+        <item>Pike push-ups</item>
+    </string-array>
+
+
+    <string name="posePushUpsArmChest">
+    Step 1: Start in a plank position with your hands placed slightly wider than shoulder-width apart.\n\n
+    Step 2: Lower your body by bending your elbows, keeping your body in a straight line.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+    <string name="poseTricepsDipsChair">
+    Step 1: Sit on the edge of a sturdy chair with your hands placed on the edge, fingers pointing forward.\n\n
+    Step 2: Slide your hips off the chair and walk your feet forward.\n\n
+    Step 3: Lower your body by bending your elbows, keeping your back close to the chair.\n\n
+    Step 4: Push through your palms to raise your body back up.
+</string>
+
+    <string name="poseDiamondPushUps">
+    Step 1: Begin in a push-up position with your hands close together, forming a diamond shape with your thumbs and index fingers.\n\n
+    Step 2: Lower your body by bending your elbows, keeping your elbows close to your sides.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+    <string name="poseDeclinePushUps">
+    Step 1: Place your feet on an elevated surface such as a step or a bench, and assume a push-up position.\n\n
+    Step 2: Lower your body by bending your elbows, keeping your body in a straight line.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+    <string name="poseWidePushUps">
+    Step 1: Start in a push-up position with your hands placed wider than shoulder-width apart.\n\n
+    Step 2: Lower your body by bending your elbows, keeping your body in a straight line.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+    <string name="poseClapPushUps">
+    Step 1: Begin in a push-up position with your hands placed slightly wider than shoulder-width apart.\n\n
+    Step 2: Lower your body by bending your elbows, and as you push back up, explode off the ground and clap your hands together.\n\n
+    Step 3: Land with soft elbows and go into the next repetition.
+</string>
+
+    <string name="posePikePushUps">
+    Step 1: Start in a downward dog position, with your hips high and your hands and feet on the ground.\n\n
+    Step 2: Lower your head toward the ground, bending your elbows and keeping your legs straight.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+
+    <!-- descriptions the arm & chest exercises -->
+
+    <string-array name="shoulder_back_workout_names">
+        <item>Push-Ups</item>
+        <item>Bird Dog Plank</item>
+        <item>Superman</item>
+        <item>Shoulder Taps</item>
+        <item>Back Extensions</item>
+        <item>Bear Crawls</item>
+        <item>Inchworms</item>
+    </string-array>
+
+
+    <string name="posePushUpsShoulderBack">
+    Step 1: Start in a plank position with your arms extended and hands beneath your shoulders.\n\n
+    Step 2: Lower your body by bending your elbows, keeping your body in a straight line.\n\n
+    Step 3: Push back up to the starting position.
+</string>
+
+    <string name="poseBirdDogPlank">
+    Step 1: Begin in a plank position with your arms extended and hands beneath your shoulders.\n\n
+    Step 2: Lift your right arm and extend it forward while simultaneously lifting your left leg and extending it backward.\n\n
+    Step 3: Hold this position for a moment, then return to the plank position.\n\n
+    Step 4: Switch sides and repeat the movement.
+</string>
+
+    <string name="poseSuperman">
+    Step 1: Lie face down on the ground with your arms extended in front of you and your legs straight.\n\n
+    Step 2: Lift your arms, chest, and legs off the ground as high as possible.\n\n
+    Step 3: Hold this position for a moment, then lower your limbs back down.
+</string>
+
+    <string name="poseShoulderTaps">
+    Step 1: Begin in a plank position with your arms extended and hands beneath your shoulders.\n\n
+    Step 2: Lift your right hand and tap your left shoulder while engaging your core to keep your body stable.\n\n
+    Step 3: Place your right hand back on the ground and repeat the movement with your left hand tapping your right shoulder.
+</string>
+
+    <string name="poseBackExtensions">
+    Step 1: Lie face down on the ground with your arms extended in front of you.\n\n
+    Step 2: Lift your chest, arms, and legs off the ground as high as possible while squeezing your lower back muscles.\n\n
+    Step 3: Lower your limbs back down to the ground.
+</string>
+
+    <string name="poseBearCrawls">
+    Step 1: Begin on your hands and knees in a tabletop position.\n\n
+    Step 2: Lift your knees a few inches off the ground, hovering them as you move.\n\n
+    Step 3: Move your right hand and left foot forward simultaneously, followed by your left hand and right foot.\n\n
+    Step 4: Keep your hips low and your back straight as you crawl forward.
+</string>
+
+    <string name="poseInchworms">
+    Step 1: Stand with your feet hip-width apart.\n\n
+    Step 2: Bend at your waist and place your hands on the ground.\n\n
+    Step 3: Walk your hands forward until you\'re in a plank position.\n\n
+    Step 4: Take small steps with your feet toward your hands, returning to the bent-over position.\n\n
+    Step 5: Stand up straight and repeat the movement.
+</string>
+
+
+    <!-- descriptions for the shoulder & back exercises -->
+
+    <string-array name="leg_workout_names">
+        <item>Squats</item>
+        <item>Lunges</item>
+        <item>Jump Squats</item>
+        <item>Calf Raises</item>
+        <item>Jumping Jacks</item>
+        <item>High Knees</item>
+        <item>Sumo Squats</item>
+    </string-array>
+
+
+    <string name="poseSquatsLeg">
+    Step 1: Stand with your feet shoulder-width apart.\n\n
+    Step 2: Lower your body by bending your knees and pushing your hips back, as if sitting down on an imaginary chair.\n\n
+    Step 3: Keep your back straight and your chest up.\n\n
+    Step 4: Push through your heels to return to the starting position.
+</string>
+
+    <string name="poseLungesLeg">
+    Step 1: Start by standing with your feet together.\n\n
+    Step 2: Take a step forward with one leg and lower your body until both knees are bent at 90-degree angles.\n\n
+    Step 3: Push off the front foot to return to the starting position.\n\n
+    Step 4: Repeat with the opposite leg.
+</string>
+
+    <string name="poseJumpSquats">
+    Step 1: Begin by standing with your feet shoulder-width apart.\n\n
+    Step 2: Lower your body into a squat position by bending your knees, keeping your back straight and chest up.\n\n
+    Step 3: Explosively jump straight up, extending your hips, knees, and ankles simultaneously.\n\n
+    Step 4: While in the air, bring your knees toward your chest.\n\n
+    Step 5: Land softly and immediately transition into another squat, repeating the motion for the desired number of reps.\n\n
+    Step 6: Remember to engage your core muscles throughout the exercise.
+</string>
+
+
+    <string name="poseCalfRaises">
+    Step 1: Stand with your feet hip-width apart.\n\n
+    Step 2: Lift your heels off the ground as high as possible, standing on your toes.\n\n
+    Step 3: Lower your heels back down to the ground.\n\n
+    Step 4: Repeat the movement.
+</string>
+
+    <string name="poseJumpingJacksLeg">
+    Step 1: Start by standing with your feet together and arms at your sides.\n\n
+    Step 2: Jump your feet out wide as you simultaneously raise your arms overhead.\n\n
+    Step 3: Jump your feet back together and return your arms to your sides.
+</string>
+
+    <string name="poseHighKneesLeg">
+    Step 1: Stand with your feet hip-width apart.\n\n
+    Step 2: Lift your right knee towards your chest, aiming to get it as high as possible.\n\n
+    Step 3: Lower your right leg and immediately lift your left knee.\n\n
+    Step 4: Continue alternating legs, as if running in place while lifting your knees.
+</string>
+
+    <string name="poseSumoSquats">
+    Step 1: Start by standing with your feet wider than shoulder-width apart and your toes pointed slightly outward.\n\n
+    Step 2: Keep your chest up and engage your core muscles for stability.\n\n
+    Step 3: Lower your body by bending your knees and pushing your hips back, as if you\'re sitting down into a wide squat.\n\n
+    Step 4: Continue lowering until your thighs are parallel to the ground, or as low as your flexibility allows.\n\n
+    Step 5: Make sure your knees are tracking over your toes and not caving inward.\n\n
+    Step 6: Press through your heels to stand back up, straightening your legs.\n\n
+    Step 7: Repeat the movement for the desired number of reps.\n\n
+    Step 8: Remember to maintain a neutral spine and avoid hunching your back.\n\n
+</string>
+
+    <string name="start">START</string>
+    <string name="_01_00">01:00</string>
+    <string name="how_to_do_this">How To Do This</string>
+    <string name="watch_on_youtube">Watch on YouTube</string>
+    <string name="video_button">Video Button</string>
+    <string name="high_knees">High Knees</string>
+    <string name="mountain_climber">Mountain Climber</string>
+    <string name="plank">Plank</string>
+    <string name="russian_twists">Russian Twists</string>
+    <string name="bicycle_crunches_f">Bicycle Crunches</string>
+    <string name="burpees">Burpees</string>
+    <string name="jumping_jacks">Jumping Jacks</string>
+    <string name="lunges">Lunges</string>
+    <string name="squats">Squats</string>
+    <string name="crunches">Crunches</string>
+    <string name="leg_raises">Leg Raises</string>
+    <string name="scissor_kicks">Scissor Kicks</string>
+    <string name="back_extensions">Back Extensions</string>
+    <string name="bear_crawls">Bear Crawls</string>
+    <string name="inchworms">Inchworms</string>
+    <string name="bird_dog_plank">Bird Dog Plank</string>
+    <string name="shoulder_taps">Shoulder Taps</string>
+    <string name="superman">Superman</string>
+    <string name="wide_push_ups">Wide Push-ups</string>
+    <string name="triceps_dips_on_a_chair">Triceps Dips on a Chair</string>
+    <string name="pike_push_ups">Pike Push-Ups</string>
+    <string name="diamond_push_ups">Diamond Push-Ups</string>
+    <string name="clap_push_ups">Clap Push-Ups</string>
+    <string name="calf_raises">Calf Raises</string>
+    <string name="skater_lunges">Skater Lunges</string>
+    <string name="sumo_squats">Sumo Squats</string>
+    <string name="jump_squats">Jump Squats</string>
+    <string name="sp1image">sp1image</string>
+    <string name="sp2image">sp2image</string>
+    <string name="or_continue_with">━━━━ or continue with ━━━━</string>
+    <string name="splashscreen">splashscreen</string>
+    <string name="step_count">Step Count</string>
+    <string name="stop">Stop</string>
+    <string name="stop_count">stop count</string>
+    <string name="start_count">start count</string>
+    <string name="set_daily_step_goal">Set Daily Step Goal</string>
+    <string name="set_goal">Set Goal</string>
+    <string name="today">Today</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="steps">steps</string>
+    <string name="default_web_client_id" />
+    <string name="nutrition_activity">Nutrition Activity</string>
+    <string name="fruits">Fruits</string>
+    <string name="veggies">Veggies</string>
+    <string name="meat">Meat</string>
+    <string name="nuts">Nuts</string>
+    <string name="fish">Fish</string>
+    <string name="scrollable_content_for_fish_data">Scrollable content for fish data</string>
+    <string name="nutrition_facts">Nutrition Facts</string>
+    <string name="_100_gram">100 gram</string>
+
+
+    <!-- descriptions for the leg exercises -->
+
+
+
+    <!-- string for fruit -->
+    <string-array name="fruits_name">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Berries</item>
+        <item>Grape</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Pineapple</item>
+        <item>Watermelon</item>
+
+
+    </string-array>
+    <string name="apple">Apple</string>
+    <string name="banana">Banana</string>
+    <string name="berry">Berry</string>
+    <string name="orange">Orange</string>
+    <string name="pineapple">Pineapple</string>
+    <string name="grapes">Grapes</string>
+    <string name="watermelon">Watermelon</string>
+    <string name="mango">Mango</string>
+
+    <!-- Apple -->
+    <string name="apple_calorie">52 Kcal</string>
+    <string name="apple_protein">0.3 g</string>
+    <string name="apple_carbs">14 g</string>
+    <string name="apple_fat">0.2 g</string>
+
+    <!-- Banana -->
+    <string name="banana_calorie">89 Kcal</string>
+    <string name="banana_protein">1.1 g</string>
+    <string name="banana_carbs">22 g</string>
+    <string name="banana_fat">0.3 g</string>
+
+    <!-- Berries (Mixed) -->
+    <string name="berries_calorie">32 Kcal</string>
+    <string name="berries_protein">0.7 g</string>
+    <string name="berries_carbs">7 g</string>
+    <string name="berries_fat">0.3 g</string>
+
+    <!-- Orange -->
+    <string name="orange_calorie">43 Kcal</string>
+    <string name="orange_protein">1 g</string>
+    <string name="orange_carbs">8.2 g</string>
+    <string name="orange_fat">0.2 g</string>
+
+    <!-- Pineapple -->
+    <string name="pineapple_calorie">50 Kcal</string>
+    <string name="pineapple_protein">0.5 g</string>
+    <string name="pineapple_carbs">13.1 g</string>
+    <string name="pineapple_fat">0.1 g</string>
+
+    <!-- Grapes -->
+    <string name="grapes_calorie">69 Kcal</string>
+    <string name="grapes_protein">0.7 g</string>
+    <string name="grapes_carbs">18 g</string>
+    <string name="grapes_fat">0.2 g</string>
+
+    <!-- Watermelon -->
+    <string name="watermelon_calorie">30 Kcal</string>
+    <string name="watermelon_protein">0.6 g</string>
+    <string name="watermelon_carbs">7.6 g</string>
+    <string name="watermelon_fat">0.2 g</string>
+
+    <!-- Mango -->
+    <string name="mango_calorie">60 Kcal</string>
+    <string name="mango_protein">0.8 g</string>
+    <string name="mango_carbs">15 g</string>
+    <string name="mango_fat">0.6 g</string>
+
+
+
+
+
+
+
+
+    <!-- string for veggies -->
+    <string-array name="veggies_name">
+        <item>Asparagus</item>
+        <item>Broccoli</item>
+        <item>Carrot</item>
+        <item>Cucumber</item>
+        <item>Potato</item>
+        <item>Radish</item>
+        <item>Tomato</item>
+        <item>spinach</item>
+    </string-array>
+
+    <string name="broccoli">Broccoli</string>
+    <string name="spinach">Spinach</string>
+    <string name="carrot">Carrot</string>
+    <string name="tomato">Tomato</string>
+    <string name="cucumber">Cucumber</string>
+    <string name="potato">Potato</string>
+    <string name="asparagus">Asparagus</string>
+    <string name="radish">Radish</string>
+
+
+    <!-- Broccoli -->
+    <string name="broccoli_calorie">34 Kcal</string>
+    <string name="broccoli_protein">2.8 g</string>
+    <string name="broccoli_carbs">6.6 g</string>
+    <string name="broccoli_fat">0.4 g</string>
+
+    <!-- Spinach -->
+    <string name="spinach_calorie">23 Kcal</string>
+    <string name="spinach_protein">2.9 g</string>
+    <string name="spinach_carbs">3.6 g</string>
+    <string name="spinach_fat">0.4 g</string>
+
+    <!-- Carrot -->
+    <string name="carrot_calorie">41 Kcal</string>
+    <string name="carrot_protein">0.9 g</string>
+    <string name="carrot_carbs">10 g</string>
+    <string name="carrot_fat">0.2 g</string>
+
+    <!-- Tomato -->
+    <string name="tomato_calorie">18 Kcal</string>
+    <string name="tomato_protein">0.9 g</string>
+    <string name="tomato_carbs">3.9 g</string>
+    <string name="tomato_fat">0.2 g</string>
+
+    <!-- Cucumber -->
+    <string name="cucumber_calorie">16 Kcal</string>
+    <string name="cucumber_protein">0.7 g</string>
+    <string name="cucumber_carbs">3.6 g</string>
+    <string name="cucumber_fat">0.2 g</string>
+
+    <!-- Potato (Baked, without skin) -->
+    <string name="potato_calorie">93 Kcal</string>
+    <string name="potato_protein">2.02 g</string>
+    <string name="potato_carbs">21.04 g</string>
+    <string name="potato_fat">0.15 g</string>
+
+    <!-- Asparagus -->
+    <string name="asparagus_calorie">20 Kcal</string>
+    <string name="asparagus_protein">2.0 g</string>
+    <string name="asparagus_carbs">3.7 g</string>
+    <string name="asparagus_fat">0.2 g</string>
+
+    <!-- Radish -->
+    <string name="radish_calorie">16 Kcal</string>
+    <string name="radish_protein">0.7 g</string>
+    <string name="radish_carbs">3.4 g</string>
+    <string name="radish_fat">0.1 g</string>
+
+
+
+
+
+    <!-- string for meat -->
+    <string-array name="meat_name">
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Duck</item>
+        <item>Goat</item>
+        <item>Lamb</item>
+        <item>Pork</item>
+        <item>Turkey</item>
+        <item>Veal</item>
+    </string-array>
+
+
+    <string name="beef">Beef</string>
+    <string name="chicken">Chicken</string>
+    <string name="pork">Pork</string>
+    <string name="lamb">Lamb</string>
+    <string name="veal">Veal</string>
+    <string name="turkey">Turkey</string>
+    <string name="duck">Duck</string>
+    <string name="goat">Goat</string>
+
+
+    <!-- Beef -->
+    <string name="beef_calorie">250 Kcal</string>
+    <string name="beef_protein">26 g</string>
+    <string name="beef_carbs">0 g</string>
+    <string name="beef_fat">17 g</string>
+
+    <!-- Chicken -->
+    <string name="chicken_calorie">165 Kcal</string>
+    <string name="chicken_protein">31 g</string>
+    <string name="chicken_carbs">0 g</string>
+    <string name="chicken_fat">3.6 g</string>
+
+    <!-- Pork -->
+    <string name="pork_calorie">143 Kcal</string>
+    <string name="pork_protein">25 g</string>
+    <string name="pork_carbs">0 g</string>
+    <string name="pork_fat">4 g</string>
+
+    <!-- Lamb -->
+    <string name="lamb_calorie">258 Kcal</string>
+    <string name="lamb_protein">25 g</string>
+    <string name="lamb_carbs">0 g</string>
+    <string name="lamb_fat">17 g</string>
+
+    <!-- Veal -->
+    <string name="veal_calorie">158 Kcal</string>
+    <string name="veal_protein">30 g</string>
+    <string name="veal_carbs">0 g</string>
+    <string name="veal_fat">3.5 g</string>
+
+    <!-- Turkey -->
+    <string name="turkey_calorie">135 Kcal</string>
+    <string name="turkey_protein">30 g</string>
+    <string name="turkey_carbs">0 g</string>
+    <string name="turkey_fat">1 g</string>
+
+    <!-- Duck -->
+    <string name="duck_calorie">337 Kcal</string>
+    <string name="duck_protein">19 g</string>
+    <string name="duck_carbs">0 g</string>
+    <string name="duck_fat">28 g</string>
+
+    <!-- Goat -->
+    <string name="goat_calorie">143 Kcal</string>
+    <string name="goat_protein">27 g</string>
+    <string name="goat_carbs">0 g</string>
+    <string name="goat_fat">3 g</string>
+
+
+
+
+
+    <!-- string for nut -->
+    <string-array name="nut_name">
+        <item>Almond</item>
+        <item>Cashew</item>
+        <item>Chestnut</item>
+        <item>Hazelnut</item>
+        <item>Macadamia</item>
+        <item>Peanut</item>
+        <item>Sunflower Seed</item>
+        <item>Walnut</item>
+    </string-array>
+
+
+    <string name="almond">Almond</string>
+    <string name="walnut">Walnut</string>
+    <string name="cashew">Cashew</string>
+    <string name="peanut">Peanut</string>
+    <string name="hazelnut">Hazelnut</string>
+    <string name="sunflower_seed">Sunflower Seed</string>
+    <string name="chestnuts">Chestnuts</string>
+    <string name="macadamia">Macadamia</string>
+
+
+    <!-- Almond -->
+    <string name="almond_calorie">576 Kcal</string>
+    <string name="almond_protein">21 g</string>
+    <string name="almond_carbs">22 g</string>
+    <string name="almond_fat">49 g</string>
+
+    <!-- Walnut -->
+    <string name="walnut_calorie">654 Kcal</string>
+    <string name="walnut_protein">15 g</string>
+    <string name="walnut_carbs">14 g</string>
+    <string name="walnut_fat">65 g</string>
+
+    <!-- Cashew -->
+    <string name="cashew_calorie">553 Kcal</string>
+    <string name="cashew_protein">18 g</string>
+    <string name="cashew_carbs">30 g</string>
+    <string name="cashew_fat">44 g</string>
+
+    <!-- Peanut -->
+    <string name="peanut_calorie">567 Kcal</string>
+    <string name="peanut_protein">25 g</string>
+    <string name="peanut_carbs">16 g</string>
+    <string name="peanut_fat">49 g</string>
+
+    <!-- Hazelnut -->
+    <string name="hazelnut_calorie">628 Kcal</string>
+    <string name="hazelnut_protein">15 g</string>
+    <string name="hazelnut_carbs">17 g</string>
+    <string name="hazelnut_fat">61 g</string>
+
+    <!-- Sunflower Seeds -->
+    <string name="sunflower_seeds_calorie">584 Kcal</string>
+    <string name="sunflower_seeds_protein">20 g</string>
+    <string name="sunflower_seeds_carbs">20 g</string>
+    <string name="sunflower_seeds_fat">51 g</string>
+
+    <!-- Chestnuts -->
+    <string name="chestnuts_calorie">196 Kcal</string>
+    <string name="chestnuts_protein">2.3 g</string>
+    <string name="chestnuts_carbs">44 g</string>
+    <string name="chestnuts_fat">2.2 g</string>
+
+    <!-- Macadamia -->
+    <string name="macadamia_calorie">718 Kcal</string>
+    <string name="macadamia_protein">7.9 g</string>
+    <string name="macadamia_carbs">13.8 g</string>
+    <string name="macadamia_fat">75.8 g</string>
+
+
+
+
+
+    <!-- string for fish -->
+    <string-array name="fish_name">
+        <item>Catla</item>
+        <item>Hilsa</item>
+        <item>Mirror Carp</item>
+        <item>Red Drum</item>
+        <item>Rohu Carp</item>
+        <item>Salmon</item>
+        <item>Tuna</item>
+        <item>Tilapia</item>
+    </string-array>
+
+    <string name="salmon">Salmon</string>
+    <string name="tuna">Tuna</string>
+    <string name="tilapia">Tilapia</string>
+    <string name="hilsa">Hilsa</string>
+    <string name="catla">Catla</string>
+    <string name="rohu_carp">Rohu Carp</string>
+    <string name="mirror_carp">Mirror Carp</string>
+    <string name="red_drum">Red Drum</string>
+
+
+    <!-- Salmon -->
+    <string name="salmon_calorie">206 Kcal</string>
+    <string name="salmon_protein">22 g</string>
+    <string name="salmon_carbs">0 g</string>
+    <string name="salmon_fat">12 g</string>
+
+    <!-- Tuna -->
+    <string name="tuna_calorie">184 Kcal</string>
+    <string name="tuna_protein">29 g</string>
+    <string name="tuna_carbs">0 g</string>
+    <string name="tuna_fat">6 g</string>
+
+    <!-- Tilapia -->
+    <string name="tilapia_calorie">96 Kcal</string>
+    <string name="tilapia_protein">21 g</string>
+    <string name="tilapia_carbs">0 g</string>
+    <string name="tilapia_fat">1.7 g</string>
+
+    <!-- Hilsa -->
+    <string name="hilsa_calorie">290 Kcal (approximate)</string>
+    <string name="hilsa_protein">24 g (approximate)</string>
+    <string name="hilsa_carbs">0 g (approximate)</string>
+    <string name="hilsa_fat">21 g (approximate)</string>
+
+    <!-- Catla -->
+    <string name="catla_calorie">97 Kcal (approximate)</string>
+    <string name="catla_protein">22 g (approximate)</string>
+    <string name="catla_carbs">0 g (approximate)</string>
+    <string name="catla_fat">0.6 g (approximate)</string>
+
+    <!-- Rohu Carp -->
+    <string name="rohu_carp_calorie">97 Kcal (approximate)</string>
+    <string name="rohu_carp_protein">22 g (approximate)</string>
+    <string name="rohu_carp_carbs">0 g (approximate)</string>
+    <string name="rohu_carp_fat">0.6 g (approximate)</string>
+
+    <!-- Mirror Carp -->
+    <string name="mirror_carp_calorie">96 Kcal (approximate)</string>
+    <string name="mirror_carp_protein">21 g (approximate)</string>
+    <string name="mirror_carp_carbs">0 g (approximate)</string>
+    <string name="mirror_carp_fat">1.7 g (approximate)</string>
+
+    <!-- Red Drum -->
+    <string name="red_drum_calorie">112 Kcal (approximate)</string>
+    <string name="red_drum_protein">20 g (approximate)</string>
+    <string name="red_drum_carbs">0 g (approximate)</string>
+    <string name="red_drum_fat">3 g (approximate)</string>
+
+
+
+
+
+    <string name="calories">Calories</string>
+    <string name="carbohydrates">Carbohydrates</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Fat</string>
+    <string name="colon">:</string>
+
+
+
+    <!-- Apple -->
+    <string name="health_benefits_of_apple">Health Benefits of Apple</string>
+    <string name="apple_details">Apples are a good source of dietary fiber, antioxidants, and vitamin C. They support digestive health, help regulate blood sugar, and promote overall well-being.</string>
+
+    <!-- Banana -->
+    <string name="health_benefits_of_banana">Health Benefits of Banana</string>
+    <string name="banana_details">Bananas are rich in potassium, providing support for heart health and blood pressure regulation. They are also an excellent source of quick energy due to their carbohydrate content.</string>
+
+    <!-- Berries (Mixed) -->
+    <string name="health_benefits_of_berries">Health Benefits of Berries</string>
+    <string name="berries_details">Berries, such as blueberries, strawberries, and raspberries, are high in antioxidants, vitamins, and fiber. They help reduce oxidative stress, promote heart health, and support digestion.</string>
+
+    <!-- Orange -->
+    <string name="health_benefits_of_orange">Health Benefits of Orange</string>
+    <string name="orange_details">Oranges are packed with vitamin C, which boosts the immune system and is essential for healthy skin. They also provide fiber and a variety of other vitamins and minerals.</string>
+
+    <!-- Pineapple -->
+    <string name="health_benefits_of_pineapple">Health Benefits of Pineapple</string>
+    <string name="pineapple_details">Pineapples are a good source of vitamin C and contain bromelain, an enzyme that aids in digestion. They provide antioxidants and help reduce inflammation.</string>
+
+    <!-- Grapes -->
+    <string name="health_benefits_of_grapes">Health Benefits of Grapes</string>
+    <string name="grapes_details">Grapes contain antioxidants like resveratrol, which may benefit heart health. They also provide vitamins and minerals that support overall well-being.</string>
+
+    <!-- Watermelon -->
+    <string name="health_benefits_of_watermelon">Health Benefits of Watermelon</string>
+    <string name="watermelon_details">Watermelon is hydrating due to its high water content and offers vitamins like A and C. It\'s a refreshing fruit choice, especially on hot days.</string>
+
+    <!-- Mango -->
+    <string name="health_benefits_of_mango">Health Benefits of Mango</string>
+    <string name="mango_details">Mangos are rich in vitamin A and vitamin C, which promote healthy skin and boost the immune system. They also provide fiber and antioxidants for overall well-being.</string>
+
+
+
+
+    <!-- Salmon -->
+    <string name="health_benefits_of_salmon">Health Benefits of Salmon</string>
+    <string name="salmon_details">Salmon is rich in omega-3 fatty acids, promoting heart and brain health, reducing inflammation, and supporting overall well-being.</string>
+
+    <!-- Tuna -->
+    <string name="health_benefits_of_tuna">Health Benefits of Tuna</string>
+    <string name="tuna_details">Tuna is a source of lean protein and omega-3 fatty acids, aiding in muscle health and reducing the risk of chronic diseases.</string>
+
+    <!-- Tilapia -->
+    <string name="health_benefits_of_tilapia">Health Benefits of Tilapia</string>
+    <string name="tilapia_details">Tilapia is a low-calorie fish that provides protein and essential nutrients for overall well-being and weight management.</string>
+
+    <!-- Hilsa -->
+    <string name="health_benefits_of_hilsa">Health Benefits of Hilsa</string>
+    <string name="hilsa_details">Hilsa fish is a source of protein and healthy fats, supporting muscle health and overall well-being.</string>
+
+    <!-- Catla -->
+    <string name="health_benefits_of_catla">Health Benefits of Catla</string>
+    <string name="catla_details">Catla fish provides protein and essential nutrients for overall health and well-being.</string>
+
+    <!-- Rohu Carp -->
+    <string name="health_benefits_of_rohu_carp">Health Benefits of Rohu Carp</string>
+    <string name="rohu_carp_details">Rohu Carp offers protein and essential nutrients, supporting muscle health and overall well-being.</string>
+
+    <!-- Mirror Carp -->
+    <string name="health_benefits_of_mirror_carp">Health Benefits of Mirror Carp</string>
+    <string name="mirror_carp_details">Mirror Carp is a source of protein and essential nutrients, contributing to overall health and well-being.</string>
+
+    <!-- Red Drum -->
+    <string name="health_benefits_of_red_drum">Health Benefits of Red Drum</string>
+    <string name="red_drum_details">Red Drum fish provides protein and essential nutrients, promoting muscle health and overall well-being.</string>
+
+
+
+    <!-- Beef -->
+    <string name="health_benefits_of_beef">Health Benefits of Beef</string>
+    <string name="beef_details">Lean cuts of beef provide a significant source of protein and essential vitamins like B12 and iron, supporting muscle health and preventing anemia.</string>
+
+    <!-- Chicken -->
+    <string name="health_benefits_of_chicken">Health Benefits of Chicken</string>
+    <string name="chicken_details">Skinless chicken breast is a lean protein source that aids in muscle growth and repair. It is low in saturated fat, making it a heart-healthy choice.</string>
+
+    <!-- Pork -->
+    <string name="health_benefits_of_pork">Health Benefits of Pork</string>
+    <string name="pork_details">Lean pork cuts provide protein, vitamins, and minerals, contributing to muscle health and overall well-being.</string>
+
+    <!-- Lamb -->
+    <string name="health_benefits_of_lamb">Health Benefits of Lamb</string>
+    <string name="lamb_details">Lamb is a good source of protein, iron, and vitamin B12, which are essential for energy production and maintaining healthy red blood cells.</string>
+
+    <!-- Veal -->
+    <string name="health_benefits_of_veal">Health Benefits of Veal</string>
+    <string name="veal_details">Veal offers lean protein and essential nutrients, supporting muscle growth and overall health when consumed as part of a balanced diet.</string>
+
+    <!-- Turkey -->
+    <string name="health_benefits_of_turkey">Health Benefits of Turkey</string>
+    <string name="turkey_details">Skinless turkey breast is a lean protein that aids in muscle maintenance and supports heart health by being low in saturated fat.</string>
+
+    <!-- Duck -->
+    <string name="health_benefits_of_duck">Health Benefits of Duck</string>
+    <string name="duck_details">Duck meat is rich in protein and essential nutrients, although it is higher in fat. When consumed in moderation, it can be part of a healthy diet.</string>
+
+    <!-- Goat -->
+    <string name="health_benefits_of_goat">Health Benefits of Goat</string>
+    <string name="goat_details">Goat meat provides protein, iron, and vitamins, promoting muscle health and overall well-being.</string>
+
+
+
+
+    <!-- Almond -->
+    <string name="health_benefits_of_almond">Health Benefits of Almond</string>
+    <string name="almond_details">Almonds are a source of heart-healthy monounsaturated fats, fiber, and essential nutrients, contributing to cardiovascular health and aiding in weight management.</string>
+
+    <!-- Walnut -->
+    <string name="health_benefits_of_walnut">Health Benefits of Walnut</string>
+    <string name="walnut_details">Walnuts offer omega-3 fatty acids, which support brain health and reduce inflammation, along with protein and essential nutrients.</string>
+
+    <!-- Cashew -->
+    <string name="health_benefits_of_cashew">Health Benefits of Cashew</string>
+    <string name="cashew_details">Cashews are a good source of protein and monounsaturated fats, supporting heart health and overall well-being.</string>
+
+    <!-- Peanut -->
+    <string name="health_benefits_of_peanut">Health Benefits of Peanut</string>
+    <string name="peanut_details">Peanuts provide protein, healthy fats, and essential nutrients, making them a nutritious choice for energy and overall health.</string>
+
+    <!-- Hazelnut -->
+    <string name="health_benefits_of_hazelnut">Health Benefits of Hazelnut</string>
+    <string name="hazelnut_details">Hazelnuts are rich in vitamins and minerals, promoting heart health and overall well-being.</string>
+
+    <!-- Sunflower Seeds -->
+    <string name="health_benefits_of_sunflower_seeds">Health Benefits of Sunflower Seeds</string>
+    <string name="sunflower_seeds_details">Sunflower seeds are a source of protein, healthy fats, and essential nutrients, contributing to overall health and well-being.</string>
+
+    <!-- Chestnuts -->
+    <string name="health_benefits_of_chestnuts">Health Benefits of Chestnuts</string>
+    <string name="chestnuts_details">Roasted chestnuts are low in fat and calories, offering carbohydrates and essential nutrients for energy and overall health.</string>
+
+    <!-- Macadamia -->
+    <string name="health_benefits_of_macadamia">Health Benefits of Macadamia</string>
+    <string name="macadamia_details">Macadamia nuts are high in monounsaturated fats and essential nutrients, supporting heart health and overall well-being.</string>
+
+
+
+
+    <!-- Broccoli -->
+    <string name="health_benefits_of_broccoli">Health Benefits of Broccoli</string>
+    <string name="broccoli_details">Broccoli is a nutritional powerhouse, providing essential vitamins and fiber. It supports the immune system, reduces inflammation, and aids digestion, making it a valuable addition to a balanced diet.</string>
+
+    <!-- Spinach -->
+    <string name="health_benefits_of_spinach">Health Benefits of Spinach</string>
+    <string name="spinach_details">Packed with vitamins and minerals, spinach promotes bone health, aids blood clotting, and boosts the immune system. It is also rich in antioxidants, which help combat chronic diseases.</string>
+
+    <!-- Carrot -->
+    <string name="health_benefits_of_carrot">Health Benefits of Carrot</string>
+    <string name="carrot_details">Carrots are known for their high beta-carotene content, which is beneficial for eye health. They also provide vitamins and fiber, supporting overall well-being.</string>
+
+    <!-- Tomato -->
+    <string name="health_benefits_of_tomato">Health Benefits of Tomato</string>
+    <string name="tomato_details">Tomatoes are a great source of antioxidants like lycopene, which may lower the risk of certain cancers and heart disease. They also offer vitamins and minerals that contribute to a healthy diet.</string>
+
+    <!-- Cucumber -->
+    <string name="health_benefits_of_cucumber">Health Benefits of Cucumber</string>
+    <string name="cucumber_details">Cucumbers are low in calories and high in water content, aiding in hydration and weight management. They also provide vitamins and minerals for overall health.</string>
+
+    <!-- Potato (Baked, without skin) -->
+    <string name="health_benefits_of_potato">Health Benefits of Potato</string>
+    <string name="potato_details">Potatoes offer carbohydrates for energy and essential nutrients like vitamin C and potassium. While they should be consumed in moderation, when prepared healthily, they can be part of a balanced diet.</string>
+
+    <!-- Asparagus -->
+    <string name="health_benefits_of_asparagus">Health Benefits of Asparagus</string>
+    <string name="asparagus_details">Asparagus is a low-calorie vegetable rich in vitamins and fiber. It supports digestive health and provides essential nutrients for overall well-being.</string>
+
+    <!-- Radish -->
+    <string name="health_benefits_of_radish">Health Benefits of Radish</string>
+    <string name="radish_details">Radishes are low in calories and contain vitamin C and other essential nutrients. They promote hydration and are a healthy addition to salads and dishes.</string>
+
+
+
 
 </resources>
