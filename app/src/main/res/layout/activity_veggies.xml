@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#DDDADA"
-    android:orientation="vertical"
-    tools:context=".WorkoutActivity">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="5dp"
@@ -19,172 +14,38 @@
         app:cardElevation="6dp"
         app:cardUseCompatPadding="true">
 
-        <RelativeLayout
+
+        <ImageView
+            android:id="@+id/left_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_back"
+            android:contentDescription="@string/back_button"
+            android:padding="5dp"
+            android:src="@drawable/back" />
+
+
+        <TextView
+            android:id="@+id/workout_tool"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/left_button"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_back"
-                android:contentDescription="@string/back_button"
-                android:padding="5dp"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/workout_tool"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/left_button"
-                android:layout_marginStart="10dp"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/segoeuib"
-                android:padding="5dp"
-                android:text="@string/nutrition_activity"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold|normal" />
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeuib"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:text="@string/veggies"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold|normal" />
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:orientation="vertical"
-        android:layout_gravity="center">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_gravity="center">
-
-            <TextView
-                android:id="@+id/fruits"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_marginStart="15dp"
-                android:text="@string/fruits"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/veggies"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/fruits"
-                android:clickable="true"
-                android:text="@string/veggies"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/meat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/veggies"
-                android:clickable="true"
-                android:text="@string/meat"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/nuts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/meat"
-                android:clickable="true"
-                android:text="@string/nuts"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/fish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/nuts"
-                android:clickable="true"
-                android:text="@string/fish"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <View
-            android:id="@+id/view_offset_helper"
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:layout_marginTop="5dp"
-            android:background="#707070" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#DDDADA">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="850dp"
-                android:layout_marginTop="5dp"
-                app:cardBackgroundColor="#DCD9D9">
-
-                <GridView
-                    android:id="@+id/gridViewId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:horizontalSpacing="16dp"
-                    android:numColumns="2"
-                    android:verticalSpacing="16dp" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
-
-    <RelativeLayout
+    <GridView
+        android:layout_below="@id/cardView"
+        android:id="@+id/gridViewId"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <FrameLayout
-            android:id="@+id/fragmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="0dp" />
-
-        <!-- View Divider -->
-        <View
-            android:id="@+id/viewDivider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#1FFFFFFF" />
-
-        <!-- Bottom Navigation View -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/white"
-            app:itemIconSize="30dp"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/navigation_menu" />
-    </RelativeLayout>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="16dp"
+        android:numColumns="2"
+        android:verticalSpacing="16dp" />
+</RelativeLayout>

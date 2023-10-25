@@ -1035,8 +1035,17 @@
     <!-- Radish -->
     <string name="health_benefits_of_radish">Health Benefits of Radish</string>
     <string name="radish_details">Radishes are low in calories and contain vitamin C and other essential nutrients. They promote hydration and are a healthy addition to salads and dishes.</string>
-
-
+    <string name="fruit">Fruit</string>
+    <string name="meats">Meats</string>
+    <string name="fishes">Fishes</string>
+    <string name="username">Username</string>
+    <string name="age">Age</string>
+    <string name="kcal">kcal</string>
+    <string name="mi">mi</string>
+    <string name="last_week_data">Last Week Data</string>
+    <string name="search">Search</string>
+    <string name="feature_of_workout">Feature of Workout</string>
+    <string name="feature_of_nutrition">Feature of Nutrition</string>
 
 
 </resources>

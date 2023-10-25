@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_centerHorizontal="true"
     tools:context=".RegisterActivity">
 
     <TextView
         android:id="@+id/registerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:text="@string/create_your_account"
         android:textColor="@color/black"
         android:textSize="35sp"
@@ -20,28 +21,24 @@
 
     <EditText
         android:id="@+id/ipFullName"
-        android:layout_width="250dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginStart="@dimen/_30sdp"
-    android:layout_marginTop="50dp"
-    android:layout_marginEnd="@dimen/_30sdp"
-    android:background="@drawable/round_textfield_bg"
-    android:hint="@string/full_name"
-    android:padding="15dp"
-    android:textColor="#000000"
-    android:inputType="text"
-    android:autofillHints="name" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:autofillHints="name"
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="#000000" />
 
 
     <EditText
         android:id="@+id/ipEmail"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/round_textfield_bg"
         android:hint="@string/e_mail"
@@ -52,34 +49,63 @@
 
     <EditText
         android:id="@+id/ipPassword"
-        android:layout_width="250dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginStart="@dimen/_30sdp"
-    android:layout_marginTop="30dp"
-    android:layout_marginEnd="@dimen/_30sdp"
-    android:background="@drawable/round_textfield_bg"
-    android:hint="@string/password"
-    android:padding="15dp"
-    android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:autofillHints="password"
-    android:inputType="textPassword" />
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="#000000" />
 
 
     <EditText
         android:id="@+id/ipRePassword"
-        android:layout_width="250dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginStart="@dimen/_30sdp"
-    android:layout_marginTop="30dp"
-    android:layout_marginEnd="@dimen/_30sdp"
-    android:background="@drawable/round_textfield_bg"
-    android:hint="@string/re_type_password"
-    android:padding="15dp"
-    android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:autofillHints="password"
-    android:inputType="textPassword" />
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/re_type_password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="#000000" />
+    <EditText
+        android:id="@+id/ipWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/weight"
+        android:padding="15dp"
+        android:textColor="#000000" />
+    <EditText
+        android:id="@+id/ipHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/height"
+        android:padding="15dp"
+        android:textColor="#000000" />
+    <EditText
+        android:id="@+id/ipAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:background="@drawable/round_textfield_bg"
+        android:hint="@string/age"
+        android:padding="15dp"
+        android:textColor="#000000" />
 
 
     <Button
@@ -101,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <TextView

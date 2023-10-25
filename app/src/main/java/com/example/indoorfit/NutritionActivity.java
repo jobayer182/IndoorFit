@@ -3,48 +3,37 @@ package com.example.indoorfit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.indoorfit.Adapter.FishAdapter;
+import androidx.cardview.widget.CardView;
 import com.example.indoorfit.Nutrition.Fish;
 import com.example.indoorfit.Nutrition.Fruit;
-import com.example.indoorfit.Nutrition.FruitED;
 import com.example.indoorfit.Nutrition.Meat;
 import com.example.indoorfit.Nutrition.Nut;
 import com.example.indoorfit.Nutrition.Veggies;
-import com.example.indoorfit.StepCounter.StepCounterActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class NutritionActivity extends AppCompatActivity {
 
-    private GridView gridView;
-    private String[] nutritionNames;
-    private int[] nutritionImages = {R.drawable.apple, R.drawable.banana, R.drawable.berries,
-            R.drawable.grape, R.drawable.mango, R.drawable.orange, R.drawable.pineapple,
-            R.drawable.watermelon};
+    private CardView fruitCardView;
+    private CardView veggiesCardView;
+    private CardView meatCardView;
+    private CardView nutCardView;
+    private CardView fishCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition);
 
-        TextView fruitsTextView = findViewById(R.id.fruits);
-        TextView veggiesTextView = findViewById(R.id.veggies);
-        TextView meatTextView = findViewById(R.id.meat);
-        TextView nutsTextView = findViewById(R.id.nuts);
-        TextView fishTextView = findViewById(R.id.fish);
 
+        // Initialize the CardViews
+        fruitCardView = findViewById(R.id.fruitId);
+        veggiesCardView = findViewById(R.id.veggiesId);
+        meatCardView = findViewById(R.id.meatId);
+        nutCardView = findViewById(R.id.nutId);
+        fishCardView = findViewById(R.id.fishId);
 
-        nutritionNames = getResources().getStringArray(R.array.fruits_name);
-        gridView = (GridView) findViewById(R.id.gridViewId);
-
-        FishAdapter adapter = new FishAdapter(this, nutritionNames, nutritionImages);
-        gridView.setAdapter(adapter);
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -61,60 +50,51 @@ public class NutritionActivity extends AppCompatActivity {
         });
 
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        // Handle clicks on CardViews
+        fruitCardView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(NutritionActivity.this, FruitED.class);
-                intent.putExtra("nutritionName", position + 1); // Add 1 because positions are zero-based
-                startActivity(intent);
+            public void onClick(View v) {
+                // Start Fruit activity
+                Intent fruitIntent = new Intent(NutritionActivity.this, Fruit.class);
+                startActivity(fruitIntent);
             }
         });
 
-        fruitsTextView.setOnClickListener(new View.OnClickListener() {
+        veggiesCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fruitsTextViewIntent = new Intent(NutritionActivity.this, Fruit.class);
-                startActivity(fruitsTextViewIntent);
-                finish();
+                // Start Veggies activity
+                Intent veggiesIntent = new Intent(NutritionActivity.this, Veggies.class);
+                startActivity(veggiesIntent);
             }
         });
 
-        veggiesTextView.setOnClickListener(new View.OnClickListener() {
+        meatCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent veggiesTextViewIntent = new Intent(NutritionActivity.this, Veggies.class);
-                startActivity(veggiesTextViewIntent);
-                finish();
-
+                // Start Meat activity
+                Intent meatIntent = new Intent(NutritionActivity.this, Meat.class);
+                startActivity(meatIntent);
             }
         });
 
-        meatTextView.setOnClickListener(new View.OnClickListener() {
+        nutCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent meatTextViewIntent = new Intent(NutritionActivity.this, Meat.class);
-                startActivity(meatTextViewIntent);
-                finish();
+                // Start Nut activity
+                Intent nutIntent = new Intent(NutritionActivity.this, Nut.class);
+                startActivity(nutIntent);
             }
         });
 
-        nutsTextView.setOnClickListener(new View.OnClickListener() {
+        fishCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nutsTextViewIntent = new Intent(NutritionActivity.this, Nut.class);
-                startActivity(nutsTextViewIntent);
-                finish();
+                // Start Fish activity
+                Intent fishIntent = new Intent(NutritionActivity.this, Fish.class);
+                startActivity(fishIntent);
             }
-        });
-
-        fishTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent fishTextViewIntent = new Intent(NutritionActivity.this, Fish.class);
-                startActivity(fishTextViewIntent);
-                finish();
-            }
-
         });
 
 
@@ -136,9 +116,6 @@ public class NutritionActivity extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.menuNutrition:
-                    Intent nutritionIntent = new Intent(getApplicationContext(), Fruit.class);
-                    startActivity(nutritionIntent);
-                    finish();
                     return true;
                 case R.id.menuProfile:
                     startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
@@ -147,7 +124,7 @@ public class NutritionActivity extends AppCompatActivity {
                     return true;
             }
             return false;
-
         });
     }
 }
+

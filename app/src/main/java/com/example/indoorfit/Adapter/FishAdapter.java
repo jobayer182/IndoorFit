@@ -46,7 +46,7 @@ public class FishAdapter extends BaseAdapter {
         if (convertView==null){
 
             inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.sample_nutrition,parent,false);
+            convertView = inflater.inflate(R.layout.sample_fish,parent,false);
 
 
         }

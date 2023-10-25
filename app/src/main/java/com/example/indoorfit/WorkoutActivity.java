@@ -8,7 +8,6 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.indoorfit.StepCounter.StepCounterActivity;
 import com.example.indoorfit.workout.AbsWorkout;
 import com.example.indoorfit.workout.ArmChestWorkout;
 import com.example.indoorfit.workout.FullBodyWorkout;

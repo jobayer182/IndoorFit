@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/seguisb"
-                        android:text="@string/banana_calorie"
+                        android:text="@string/orange_calorie"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/seguisb"
-                        android:text="@string/banana_protein"
+                        android:text="@string/orange_protein"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -210,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/seguisb"
-                        android:text="@string/banana_carbs"
+                        android:text="@string/orange_carbs"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -256,7 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/seguisb"
-                        android:text="@string/banana_fat"
+                        android:text="@string/orange_fat"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>

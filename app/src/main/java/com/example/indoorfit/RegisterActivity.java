@@ -18,7 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText fullNameEditText, emailEditText, passwordEditText, rePasswordEditText;
+    private EditText fullNameEditText, emailEditText, passwordEditText, rePasswordEditText, weightEditText, heightEditText, ageEditText;
+
     private Button registerButton, signInButton;
     private ProgressBar progressBar;
     private FirebaseAuth firebaseAuth;
@@ -35,6 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
         emailEditText = findViewById(R.id.ipEmail);
         passwordEditText = findViewById(R.id.ipPassword);
         rePasswordEditText = findViewById(R.id.ipRePassword);
+        weightEditText = findViewById(R.id.ipWeight);
+        heightEditText = findViewById(R.id.ipHeight);
+        ageEditText = findViewById(R.id.ipAge);
+
+
         registerButton = findViewById(R.id.registerButton);
         signInButton = findViewById(R.id.registerActivity);
         progressBar = findViewById(R.id.progressBar);
@@ -63,9 +69,12 @@ public class RegisterActivity extends AppCompatActivity {
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String rePassword = rePasswordEditText.getText().toString().trim();
+        String weight = weightEditText.getText().toString().trim();
+        String height = heightEditText.getText().toString().trim();
+        String age = ageEditText.getText().toString().trim();
 
         // Perform validation, e.g., checking if all fields are filled
-        if (fullName.isEmpty() || email.isEmpty() || password.isEmpty() || rePassword.isEmpty()) {
+        if (fullName.isEmpty() || email.isEmpty() || password.isEmpty() || rePassword.isEmpty() || weight.isEmpty() || height.isEmpty() || age.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
             return;
         }

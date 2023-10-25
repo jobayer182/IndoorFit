@@ -1,36 +1,630 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/appNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp">
 
-<FrameLayout
-        android:id="@+id/fragmentContainer"
+        <ImageView
+            android:id="@+id/userImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/user_1" />
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/viewDivider"
+        android:layout_below="@id/cardView">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.SearchView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFEBEE" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/stepsInclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#E3F2FD"
+                    android:gravity="center"
+                    android:layout_below="@+id/searchView"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rltSteps"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="10dp">
+
+                        <!-- CardView content -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgSteps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/steps"
+                                android:src="@drawable/walk" />
+                            <TextView
+                                android:id="@+id/txtStepsValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{``+fitnessData.steps}"
+                                android:textColor="#3D6CFC"
+                                android:textSize="30sp" />
+                            <TextView
+                                android:id="@+id/txtSteps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/steps_count" />
+                        </LinearLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fwInclude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stepsInclude"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/seguisb"
+                        android:text="@string/feature_of_workout"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/workoutInclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/fwInclude"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!-- Add your CardView data here -->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/fullBodyWorkout"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#ffa6c9"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/main_full_body" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/fullBody"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/absWorkout"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#ffaece"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/main_abs" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/abs"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/armChestWorkout"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#ffb7d3"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/main_arm_chest" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/arm_chest"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/shoulderBackWorkout"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#ffc0d9"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/main_shoulder_back" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/shoulder_back"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/legWorkout"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#ffc9de"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/main_leg" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/leg"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <!-- Add more CardViews for additional data -->
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/nwInclude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workoutInclude"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/seguisb"
+                        android:text="@string/feature_of_nutrition"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/nutritionInclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/nwInclude"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <!-- Add your CardView data here -->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/fruitId"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#1b9a99"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/fruit_cover" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/fruits"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/veggiesId"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#34a5a4"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/veggies_cover" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/veggies"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/meatId"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#4db0af"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/meat_cover" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/meats"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/nutId"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#67bbbb"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/nut_cover" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/nuts"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/fishId"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#80c7c6"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="10dp"
+                                app:cardUseCompatPadding="true">
+                                <!-- CardView content -->
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <!-- Image View -->
+
+                                    <!-- Text View -->
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="130dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/fish_cover" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/segoeui"
+                                        android:text="@string/fishes"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <!-- Add more CardViews for additional data -->
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
 
     <!-- View Divider -->
     <View
         android:id="@+id/viewDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#1FFFFFFF" />
+        android:layout_above="@id/bottomNavigationView"
+        android:background="@color/grey" />
 
     <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         app:backgroundTint="@color/white"
         app:itemIconSize="30dp"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/navigation_menu" />
 
-</LinearLayout>
+
+</RelativeLayout>

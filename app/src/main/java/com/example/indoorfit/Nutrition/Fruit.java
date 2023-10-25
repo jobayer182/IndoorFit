@@ -5,32 +5,50 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.indoorfit.Adapter.FishAdapter;
-import com.example.indoorfit.Adapter.FullBodyAdapter;
-import com.example.indoorfit.MainActivity;
-import com.example.indoorfit.Nutrition.Fish;
-import com.example.indoorfit.Nutrition.Fruit;
-import com.example.indoorfit.Nutrition.Meat;
-import com.example.indoorfit.Nutrition.Nut;
-import com.example.indoorfit.Nutrition.Veggies;
-import com.example.indoorfit.ProfileActivity;
+import com.example.indoorfit.Adapter.FruitAdapter;
+import com.example.indoorfit.NutritionActivity;
 import com.example.indoorfit.R;
-import com.example.indoorfit.StepCounter.StepCounterActivity;
-import com.example.indoorfit.WorkoutActivity;
-import com.example.indoorfit.workout.AbsWorkout;
-import com.example.indoorfit.workout.ArmChestWorkout;
-import com.example.indoorfit.workout.FullBodyED;
-import com.example.indoorfit.workout.FullBodyWorkout;
-import com.example.indoorfit.workout.LegWorkout;
-import com.example.indoorfit.workout.ShoulderBackWorkout;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Fruit extends AppCompatActivity {
 
+    private GridView gridView;
+    private String[] nutritionNames;
+    private int[] nutritionImages = {R.drawable.apple, R.drawable.banana, R.drawable.berries,
+            R.drawable.grape, R.drawable.mango, R.drawable.orange, R.drawable.pineapple,
+            R.drawable.watermelon};
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fruit);
+
+        nutritionNames = getResources().getStringArray(R.array.fruits_name);
+        gridView = (GridView) findViewById(R.id.gridViewId);
+
+
+        ImageView leftButton = findViewById(R.id.left_button);
+        leftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(Fruit.this, NutritionActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        });
+
+        FruitAdapter adapter = new FruitAdapter(this,nutritionNames,nutritionImages);
+        gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Fruit.this, FruitED.class);
+                intent.putExtra("nutritionName", position + 1); // Add 1 because positions are zero-based
+                startActivity(intent);
+            }
+        });
+    }
 }

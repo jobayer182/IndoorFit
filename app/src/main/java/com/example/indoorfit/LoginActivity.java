@@ -1,3 +1,4 @@
+
 package com.example.indoorfit;
 
 import android.Manifest;
@@ -11,13 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -32,7 +31,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
-
     private static final int RC_SIGN_IN = 9001;
     private static final int PERMISSION_REQUEST_ACCESS_FINE_LOCATION = 1;
 
@@ -48,50 +46,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Check and request permissions
-        checkAndRequestPermissions();
-
         firebaseAuth = FirebaseAuth.getInstance();
         initViews();
-
-        // Check if the user is already logged in using SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("LoginScreenPrefs", MODE_PRIVATE);
-        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
-
-        if (isLoggedIn) {
-            navigateToMainActivity();
-            return;
-        }
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = emailEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
-                loginUserWithEmailAndPassword(email, password);
-            }
-        });
-
-        googleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Check if the ACCESS_FINE_LOCATION permission is granted
-                if (hasLocationPermission()) {
-                    signInWithGoogle();
-                } else {
-                    // Request the permission
-                    requestLocationPermission();
-                }
-            }
-        });
-
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registrationIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(registrationIntent);
-            }
-        });
+        checkAndRequestPermissions();
+        setupClickListeners();
+        autoLoginCheck();
     }
 
     private void initViews() {
@@ -99,52 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.ipPassword);
         loginButton = findViewById(R.id.loginButton);
         googleButton = findViewById(R.id.googleButtonId);
-        registerButton = findViewById(R.id.registerActivity);
+        registerButton = findViewById(R.id.signupButton);
         progressBar = findViewById(R.id.progressBar);
-    }
-
-    private void loginUserWithEmailAndPassword(String email, String password) {
-        progressBar.setVisibility(View.VISIBLE);
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        if (task.isSuccessful()) {
-                            // User login successful, update UI or navigate to the next screen
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            if (user != null) {
-                                String userEmail = user.getEmail();
-                                Toast.makeText(LoginActivity.this, "Logged in as " + userEmail, Toast.LENGTH_SHORT).show();
-
-                                // Save login state in SharedPreferences
-                                SharedPreferences sharedPreferences = getSharedPreferences("LoginScreenPrefs", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putBoolean("isLoggedIn", true);
-                                editor.apply();
-
-                                navigateToMainActivity();
-                            }
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }
-
-    private void navigateToMainActivity() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    private boolean hasLocationPermission() {
-        return ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
-    }
-
-    private void requestLocationPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_ACCESS_FINE_LOCATION);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
@@ -168,19 +83,84 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    private void setupClickListeners() {
+        loginButton.setOnClickListener(v -> {
+            String email = emailEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+            loginUserWithEmailAndPassword(email, password);
+        });
+
+        googleButton.setOnClickListener(v -> {
+            if (hasLocationPermission()) {
+                signInWithGoogle();
+            } else {
+                requestLocationPermission();
+            }
+        });
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrationIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(registrationIntent);
+            }
+        });
+
+    }
+
+    private void autoLoginCheck() {
+        SharedPreferences sharedPreferences = getSharedPreferences("LoginScreenPrefs", MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+
+        if (isLoggedIn) {
+            navigateToMainActivity();
+        }
+    }
+
+    private void loginUserWithEmailAndPassword(String email, String password) {
+        progressBar.setVisibility(View.VISIBLE);
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    progressBar.setVisibility(View.INVISIBLE);
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        if (user != null) {
+                            String userEmail = user.getEmail();
+                            Toast.makeText(LoginActivity.this, "Logged in as " + userEmail, Toast.LENGTH_SHORT).show();
+                            saveLoginState(true);
+                            navigateToMainActivity();
+                        }
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void navigateToMainActivity() {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private boolean hasLocationPermission() {
+        return ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void requestLocationPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_ACCESS_FINE_LOCATION);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_REQUEST_ACCESS_FINE_LOCATION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission granted, you can now proceed with Google Sign-In
                 signInWithGoogle();
             } else {
-                // Permission denied, handle it (e.g., show a message or disable location-related features)
                 Toast.makeText(this, "Location permission denied.", Toast.LENGTH_SHORT).show();
             }
         }
-        // Handle other permission requests here if needed
     }
 
     private void signInWithGoogle() {
@@ -213,28 +193,26 @@ public class LoginActivity extends AppCompatActivity {
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         firebaseAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        if (task.isSuccessful()) {
-                            // User login successful, update UI or navigate to the next screen
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            if (user != null) {
-                                String userEmail = user.getEmail();
-                                Toast.makeText(LoginActivity.this, "Logged in as " + userEmail, Toast.LENGTH_SHORT).show();
-                                SharedPreferences sharedPreferences = getSharedPreferences("LoginScreenPrefs", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putBoolean("isLoggedIn", true);
-                                editor.apply();
-
-                                navigateToMainActivity();
-                            }
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                .addOnCompleteListener(this, task -> {
+                    progressBar.setVisibility(View.INVISIBLE);
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        if (user != null) {
+                            String userEmail = user.getEmail();
+                            Toast.makeText(LoginActivity.this, "Logged in as " + userEmail, Toast.LENGTH_SHORT).show();
+                            saveLoginState(true);
+                            navigateToMainActivity();
                         }
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void saveLoginState(boolean isLoggedIn) {
+        SharedPreferences sharedPreferences = getSharedPreferences("LoginScreenPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isLoggedIn", isLoggedIn);
+        editor.apply();
     }
 }
