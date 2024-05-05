@@ -1046,6 +1046,8 @@
     <string name="search">Search</string>
     <string name="feature_of_workout">Feature of Workout</string>
     <string name="feature_of_nutrition">Feature of Nutrition</string>
+    <string name="my_profile">My Profile</string>
+    <string name="e_mai">E-mail</string>
 
 
 </resources>

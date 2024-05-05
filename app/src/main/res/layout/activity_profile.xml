@@ -9,21 +9,221 @@
     tools:context=".ProfileActivity">
 
 
+    <RelativeLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/left_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangle_back"
+                android:contentDescription="@string/back_button"
+                android:padding="5dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/workout_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/segoeuib"
+                android:padding="5dp"
+                android:text="@string/my_profile"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold|normal" />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/appToolBar"
+        android:layout_above="@id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        android:background="#DDDADA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeableImageView"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/person"
+                    app:strokeColor="@color/grey"
+                    app:strokeWidth="5dp"
+                    tools:ignore="MissingConstraints" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+                    app:layout_constraintEnd_toEndOf="@+id/shapeableImageView"
+                    app:srcCompat="@drawable/photo_camera"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/seguisb"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/ipFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:background="@drawable/round_textfield_bg"
+                android:hint="@string/full_name"
+                android:padding="15dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/e_mai"
+                android:textSize="25sp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/seguisb"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/ipEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:background="@drawable/round_textfield_bg"
+                android:hint="@string/e_mail"
+                android:padding="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:textSize="25sp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/seguisb"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/ipAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:background="@drawable/round_textfield_bg"
+                android:hint="@string/age"
+                android:padding="15dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:textSize="25sp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/seguisb"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/ipHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:background="@drawable/round_textfield_bg"
+                android:hint="@string/height"
+                android:padding="15dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textSize="25sp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/seguisb"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/ipWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:background="@drawable/round_textfield_bg"
+                android:hint="@string/weight"
+                android:padding="15dp"
+                android:textColor="#000000" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
     <!-- View Divider -->
     <View
         android:id="@+id/viewDivider"
         android:layout_width="match_parent"
-        android:layout_above="@+id/bottomNavigationView"
         android:layout_height="1dp"
+        android:layout_above="@+id/bottomNavigationView"
         android:background="#1FFFFFFF" />
 
     <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         app:backgroundTint="@color/white"
         app:itemIconSize="30dp"
         app:labelVisibilityMode="unlabeled"

@@ -165,6 +165,7 @@ public class StepCounterActivity extends AppCompatActivity implements Permission
 
         subscribeAndGetRealTimeData(DataType.TYPE_STEP_COUNT_DELTA);
 
+
     }
 
     /*
@@ -198,6 +199,16 @@ public class StepCounterActivity extends AppCompatActivity implements Permission
                             public void onDataPoint(@NonNull DataPoint dataPoint) {
                                 float value = Float.parseFloat(dataPoint.getValue(Field.FIELD_STEPS).toString());
                                 fitnessDataResponseModel.steps = Float.parseFloat(new DecimalFormat("#.##").format(value + fitnessDataResponseModel.steps));
+                                // Calculate distance and calories based on the real-time step data
+                                float steps = fitnessDataResponseModel.steps;
+                                float distance = steps / 2000.0f; // 2000 steps per mile
+                                float calories = steps / 100.0f; // 4 kcal per 100 steps
+
+                                // Update the model with calculated values
+                                fitnessDataResponseModel.distance = distance;
+                                fitnessDataResponseModel.calories = calories;
+
+                                // Update the UI with the calculated values
                                 activityStepCounterBinding.setFitnessData(fitnessDataResponseModel);
                             }
                         }
